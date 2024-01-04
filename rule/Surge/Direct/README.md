@@ -38,27 +38,27 @@
 #### 规则链接
 **MASTER分支 (每日更新)**
 
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Direct/Direct.list
+https://raw.githubusercontent.com/laobanbiefangcu/ios_rule_script/master/rule/Surge/Direct/Direct.list
 
 **MASTER分支 CDN (每日更新)**
 
-https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/Direct/Direct.list
+https://cdn.jsdelivr.net/gh/laobanbiefangcu/ios_rule_script@master/rule/Surge/Direct/Direct.list
 
 **MASTER分支 GHProxy (每日更新)**
 
-https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Direct/Direct.list
+https://ghproxy.com/https://raw.githubusercontent.com/laobanbiefangcu/ios_rule_script/master/rule/Surge/Direct/Direct.list
 
 **RELEASE分支 (不定时更新)**
 
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/release/rule/Surge/Direct/Direct.list
+https://raw.githubusercontent.com/laobanbiefangcu/ios_rule_script/release/rule/Surge/Direct/Direct.list
 
 **RELEASE分支CDN (不定时更新)**
 
-https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@release/rule/Surge/Direct/Direct.list
+https://cdn.jsdelivr.net/gh/laobanbiefangcu/ios_rule_script@release/rule/Surge/Direct/Direct.list
 
 **RELEASE分支 GHProxy (不定时更新)**
 
-https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/release/rule/Surge/Direct/Direct.list
+https://ghproxy.com/https://raw.githubusercontent.com/laobanbiefangcu/ios_rule_script/release/rule/Surge/Direct/Direct.list
 
 ## 子规则/排除规则
 
