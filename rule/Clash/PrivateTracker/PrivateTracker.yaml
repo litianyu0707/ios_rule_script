@@ -286,7 +286,7 @@ payload:
   - DOMAIN-SUFFIX,acid-lounge.org.uk
   - DOMAIN-SUFFIX,aftershock-tracker.eu
   - DOMAIN-SUFFIX,aither.cc
-  - DOMAIN-SUFFIX,animetorrents.me,DIRECT
+  - DOMAIN-SUFFIX,animetorrents.me
   - DOMAIN-SUFFIX,arabp2p.com
   - DOMAIN-SUFFIX,arabafenice.me
   - DOMAIN-SUFFIX,artofmisPTion.com
@@ -349,7 +349,7 @@ payload:
   - DOMAIN-SUFFIX,gaytor.rent
   - DOMAIN-SUFFIX,gaytorrent.ru
   - DOMAIN-SUFFIX,gay-torrents.org
-  - DOMAIN-SUFFIX,gazellegames.net,DIRECT
+  - DOMAIN-SUFFIX,gazellegames.net
   - DOMAIN-SUFFIX,ghtt.net
   - DOMAIN-SUFFIX,haidan.video
   - DOMAIN-SUFFIX,hares.top
