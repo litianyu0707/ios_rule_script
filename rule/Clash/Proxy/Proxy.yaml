@@ -9,7 +9,7 @@
 # IP-CIDR6: 3
 # TOTAL: 6042
 payload:
-  - DOMAIN-SUFFIX,amazon.com
+  - DOMAIN-KEYWORD,amazon
   - DOMAIN-SUFFIX,lscr.io
   - DOMAIN-SUFFIX,ghproxy.com
   - DOMAIN-SUFFIX,vercel.app
