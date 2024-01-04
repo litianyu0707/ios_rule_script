@@ -319,6 +319,7 @@ payload:
   - DOMAIN-SUFFIX,dark-shadow.me
   - DOMAIN-SUFFIX,dasunerwartete.nl
   - DOMAIN-SUFFIX,datascene.net
+  - DOMAIN-SUFFIX,deepbassnine.com
   - DOMAIN-SUFFIX,desireleasers.be
   - DOMAIN-SUFFIX,desitorrents.tv
   - DOMAIN-SUFFIX,diablotorrent.net
@@ -331,8 +332,7 @@ payload:
   - DOMAIN-SUFFIX,empornium.ph
   - DOMAIN-SUFFIX,esharenet.eu
   - DOMAIN-SUFFIX,estone.cc
-  - DOMAIN-SUFFIX,ethor.net
-  - DOMAIN-SUFFIX,ethor.cc
+  - DOMAIN-SUFFIX,exigomusic.org
   - DOMAIN-SUFFIX,fano.in
   - DOMAIN-SUFFIX,fantastic-heaven.eu
   - DOMAIN-SUFFIX,femdomcult.org
@@ -455,7 +455,6 @@ payload:
   - DOMAIN-SUFFIX,world-in-hd.net
   - DOMAIN-SUFFIX,xspeeds.eu
   - DOMAIN-SUFFIX,xthor.tk
-  - DOMAIN-SUFFIX,xthor.to
   - DOMAIN-SUFFIX,yingk.com
   - DOMAIN-SUFFIX,nzbs.in
   - DOMAIN-SUFFIX,omgwtfnzbs.org
