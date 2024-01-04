@@ -151,7 +151,6 @@ payload:
   - DOMAIN-SUFFIX,52pt.site
   - DOMAIN-SUFFIX,aidoru-online.me
   - DOMAIN-SUFFIX,alpharatio.cc
-  - DOMAIN-SUFFIX,animebytes.tv
   - DOMAIN-SUFFIX,animetorrents.me
   - DOMAIN-SUFFIX,anthelion.me
   - DOMAIN-SUFFIX,asiancinema.me
@@ -192,7 +191,6 @@ payload:
   - DOMAIN-SUFFIX,extremlymtorrents.ws
   - DOMAIN-SUFFIX,filelist.io
   - DOMAIN-SUFFIX,gainbound.net
-  - DOMAIN-SUFFIX,gazellegames.net
   - DOMAIN-SUFFIX,gfxpeers.net
   - DOMAIN-SUFFIX,hd-space.org
   - DOMAIN-SUFFIX,hd-torrents.org
@@ -306,7 +304,6 @@ payload:
   - DOMAIN-SUFFIX,bluebird-hd.org
   - DOMAIN-SUFFIX,brasiltracker.org
   - DOMAIN-SUFFIX,broadcity.in
-  - DOMAIN-SUFFIX,brokenstones.is
   - DOMAIN-SUFFIX,btgigs.info
   - DOMAIN-SUFFIX,cartoonchaos.org
   - DOMAIN-SUFFIX,cgpeers.to
@@ -457,7 +454,6 @@ payload:
   - DOMAIN-SUFFIX,vhstapes.org
   - DOMAIN-SUFFIX,whu.pt
   - DOMAIN-SUFFIX,world-in-hd.net
-  - DOMAIN-SUFFIX,xbtmusic.org
   - DOMAIN-SUFFIX,xspeeds.eu
   - DOMAIN-SUFFIX,xthor.tk
   - DOMAIN-SUFFIX,xthor.to
