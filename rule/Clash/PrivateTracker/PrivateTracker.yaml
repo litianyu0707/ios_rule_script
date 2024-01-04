@@ -387,6 +387,7 @@ payload:
   - DOMAIN-SUFFIX,morethantv.me
   - DOMAIN-SUFFIX,kp.m-team.cc
   - DOMAIN-SUFFIX,mteam.fr
+  - DOMAIN-SUFFIX,music-vid.com
   - DOMAIN-SUFFIX,myspleen.org
   - DOMAIN-SUFFIX,nanyangpt
   - DOMAIN-SUFFIX,nbtorrents.com
@@ -420,6 +421,7 @@ payload:
   - DOMAIN-SUFFIX,pydream.net
   - DOMAIN-SUFFIX,racingfor.me
   - DOMAIN-SUFFIX,rstorrent.org.pl
+  - DOMAIN-SUFFIX,scenehd.org
   - DOMAIN-SUFFIX,scenetime.com
   - DOMAIN-SUFFIX,secret-cinema.pw
   - DOMAIN-SUFFIX,shadowthein.net
@@ -455,6 +457,7 @@ payload:
   - DOMAIN-SUFFIX,vhstapes.org
   - DOMAIN-SUFFIX,whu.pt
   - DOMAIN-SUFFIX,world-in-hd.net
+  - DOMAIN-SUFFIX,xbtmusic.org
   - DOMAIN-SUFFIX,xspeeds.eu
   - DOMAIN-SUFFIX,xthor.tk
   - DOMAIN-SUFFIX,xthor.to
