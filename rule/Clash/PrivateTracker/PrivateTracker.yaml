@@ -456,4 +456,3 @@ payload:
   - DOMAIN-SUFFIX,yingk.com
   - DOMAIN-SUFFIX,nzbs.in
   - DOMAIN-SUFFIX,omgwtfnzbs.me
-  - IP-CIDR,119.28.71.45/32,no-resolve
