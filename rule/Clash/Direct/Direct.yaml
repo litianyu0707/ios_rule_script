@@ -31,7 +31,7 @@ payload:
   - DOMAIN-SUFFIX,plex.tv
   - DOMAIN-SUFFIX,moei.ml
   - DOMAIN-SUFFIX,api.madrabbit.cf
-  - IP-CIDR,45.88.194.149/32,no-resolve
+  - IP-CIDR,45.88.194.149/32
   - DOMAIN-SUFFIX,acl4.ssr
   - DOMAIN-SUFFIX,ip6-localhost
   - DOMAIN-SUFFIX,ip6-loopback
