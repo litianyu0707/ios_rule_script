@@ -26,6 +26,7 @@ payload:
   - DOMAIN-KEYWORD,zmk
   - DOMAIN-KEYWORD,assrt
   - DOMAIN-SUFFIX,zmk.pw
+  - DOMAIN-SUFFIX,zimuku.vip
   - DOMAIN-SUFFIX,subhd.tv
   - DOMAIN-SUFFIX,subhd.la
   - DOMAIN-SUFFIX,plex.tv
