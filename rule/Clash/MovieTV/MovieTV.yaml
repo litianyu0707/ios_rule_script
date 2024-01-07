@@ -9,9 +9,6 @@
 # IP-CIDR6: 3
 # TOTAL: 6042
 payload:
-  - DOMAIN-KEYWORD,radarr
-  - DOMAIN-KEYWORD,sonarr
-  - DOMAIN-KEYWORD,lidarr
   - DOMAIN-SUFFIX,letterboxd.com
   - DOMAIN-SUFFIX,blu-ray.com
   - DOMAIN-SUFFIX,dvdsreleasedates.com
