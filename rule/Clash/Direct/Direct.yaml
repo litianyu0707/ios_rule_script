@@ -57,3 +57,7 @@ payload:
   - DOMAIN-SUFFIX,666886.xyz
   - DOMAIN-SUFFIX,xns.one
   - DOMAIN-SUFFIX,ip.sb
+  - DOMAIN-SUFFIX,xns.one
+  - DOMAIN,epg.112114.eu.org
+  - DOMAIN-SUFFIX,112114.xyz
+  - DOMAIN-SUFFIX,51zmt.top
