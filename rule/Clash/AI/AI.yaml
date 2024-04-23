@@ -1,1 +1,9 @@
-
+# NAME: AI
+# AUTHOR: laobanbiefangcu
+# REPO: https://github.com/laobanbiefangcu/ios_rule_script
+# UPDATED: 2023-12-14 17:00:01
+# DOMAIN-SUFFIX: 4
+# TOTAL: 4
+payload:
+  - DOMAIN-SUFFIX,wrtn.jp
+  - DOMAIN-KEYWORD,wrtn
