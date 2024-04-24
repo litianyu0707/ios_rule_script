@@ -8,4 +8,8 @@
 # USER-AGENT: 4
 # TOTAL: 52
 DOMAIN-SUFFIX,wrtn.jp
+DOMAIN-SUFFIX,wrtn.ai
+DOMAIN-SUFFIX,wrtn.ai
+DOMAIN,wrtn-asset-library.s3.ap-northeast-2.amazonaws.com
+DOMAIN,wrtn-image-ai-character.s3.ap-northeast-2.amazonaws.com
 DOMAIN-KEYWORD,wrtn
