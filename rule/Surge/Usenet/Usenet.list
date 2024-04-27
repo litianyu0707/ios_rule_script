@@ -8,11 +8,11 @@
 # IP-CIDR: 0
 # IP-CIDR6: 0
 # TOTAL: 7
-DOMAIN-KEYWORD,newshosting,
-DOMAIN-KEYWORD,ninja,
-DOMAIN-SUFFIX,newsgroup.ninja,
-DOMAIN-SUFFIX,news.newsgroup.ninja,
-DOMAIN-SUFFIX,newshosting.com,
-DOMAIN-SUFFIX,newsdemon.com,
-DOMAIN-SUFFIX,highwinds-media.com,
-DOMAIN-SUFFIX,ccp.ovh,
+DOMAIN-KEYWORD,newshosting
+DOMAIN-KEYWORD,ninja
+DOMAIN-SUFFIX,newsgroup.ninja
+DOMAIN-SUFFIX,news.newsgroup.ninja
+DOMAIN-SUFFIX,newshosting.com
+DOMAIN-SUFFIX,newsdemon.com
+DOMAIN-SUFFIX,highwinds-media.com
+DOMAIN-SUFFIX,ccp.ovh
