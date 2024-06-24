@@ -64,3 +64,4 @@ payload:
   - DOMAIN-SUFFIX,hw004nat-24.inkcdn.cc
   - DOMAIN-SUFFIX,johngeltt.com
   - DOMAIN-SUFFIX,ipinfo.io
+  - DOMAIN-SUFFIX,letsencrypt.org
