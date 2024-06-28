@@ -69,3 +69,9 @@ payload:
   - DOMAIN-SUFFIX,cdnpure.com
   - DOMAIN-SUFFIX,pureapk.com
   - DOMAIN-SUFFIX,winudf.com
+  - DOMAIN,account.roon.app
+  - DOMAIN,go.roonlabs.com
+  - DOMAIN,static-pr.roonlabs.net
+  - DOMAIN,roonservice.roonlabs.net
+  - DOMAIN,bits.roonlabs.net
+  - DOMAIN,events.roonlabs.net
