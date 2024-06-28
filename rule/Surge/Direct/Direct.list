@@ -64,8 +64,4 @@ DOMAIN-SUFFIX,hw004nat-24.inkcdn.cc
 DOMAIN-SUFFIX,johngeltt.com
 DOMAIN-SUFFIX,ipinfo.io
 DOMAIN-SUFFIX,letsencrypt.org
-DOMAIN-SUFFIX,roonlabs.net
-DOMAIN-SUFFIX,roonlabs.com
-DOMAIN-SUFFIX,roon.app
-DOMAIN-KEYWORD,roonlabs
-DOMAIN-KEYWORD,roon
+DOMAIN,api.roonlabs.net
