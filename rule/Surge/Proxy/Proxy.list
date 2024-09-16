@@ -79,7 +79,3 @@ DOMAIN,roonservice.roonlabs.net
 DOMAIN,bits.roonlabs.net
 DOMAIN,events.roonlabs.net
 DOMAIN-SUFFIX,foodnetwork.com
-DOMAIN,scrobbles.plex.tv
-DOMAIN,analytics.plex.tv
-DOMAIN,metadata.provider.plex.tv
-DOMAIN,images.plex.tv
