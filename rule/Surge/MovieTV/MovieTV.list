@@ -21,6 +21,10 @@ DOMAIN,epg.112114.eu.org
 DOMAIN-SUFFIX,112114.xyz
 DOMAIN-SUFFIX,51zmt.top
 DOMAIN,discover.provider.plex.tv
+DOMAIN,scrobbles.plex.tv
+DOMAIN,analytics.plex.tv
+DOMAIN,metadata.provider.plex.tv
+DOMAIN,images.plex.tv
 IP-CIDR,193.123.238.26/32,no-resolve
 IP-CIDR,140.83.51.221/32,no-resolve
 IP-CIDR,130.61.137.163/32,no-resolve
