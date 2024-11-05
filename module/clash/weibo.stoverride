@@ -179,5 +179,4 @@ http:
 script-providers:
   "移除首页签到弹窗_46":
     url: https://kelee.one/Resource/Script/Weibo/Weibo_remove_ads.js
-    interval: 86400
-
+    interval: 864
