@@ -1,0 +1,195 @@
+name: |-
+  哔哩哔哩去广告
+desc: |-
+  过滤哔哩哔哩广告、移除青少年模式弹窗和交互式弹幕、移除无用功能和链接跟踪参数。此插件仅建议iOS 15以上设备使用，且必须启用MitM-over-HTTP/2功能。
+author: |-
+  Maasea[https://github.com/Maasea], RuCu6[https://github.com/RuCu6], 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+icon: |-
+  https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Bilibili.png
+category: |-
+  iKeLee
+openUrl: |-
+  https://apps.apple.com/app/id736536022
+tag: |-
+  去广告
+system_version: |-
+  15
+loon_version: |-
+  3.2.1(749)
+homepage: |-
+  https://github.com/luestr/ProxyResource/blob/main/README.md
+date: |-
+  2024-10-19 17:18:31
+
+http:
+
+  force-http-engine:
+    - ":8000"
+
+  mitm:
+    - "app.bilibili.com"
+    - "api.bilibili.com"
+    - "api.live.bilibili.com"
+    - "grpc.biliapi.net"
+    - "www.bilibili.com"
+    - "m.bilibili.com"
+    - "live.bilibili.com"
+
+  url-rewrite:
+# 开屏广告
+    - >-
+      ^http:\/\/upos-sz-static\.bilivideo\.com\/ssaxcode\/\w{2}\/\w{2}\/\w{32}-1-SPLASH - reject-img
+    - >-
+      ^http:\/\/[\d\.]+:8000\/v1\/resource\/\w{32}-1-SPLASH - reject-img
+# 移除视频链接跟踪参数
+    - >-
+      (^https:\/\/(?:www|m)\.bilibili\.com\/video\/(?:BV\w{10}|av\d{9}))(\/?\?.*) $1 302
+# 移除直播间链接跟踪参数
+    - >-
+      (^https:\/\/live\.bilibili\.com\/\d+)(\/?\?.*) $1 302
+# 开屏广告
+    - >-
+      ^https:\/\/(?:api\.bilibili\.com\/x\/mengqi\/v1\/resource|app\.bilibili\.com\/x\/resource\/peak\/download) - reject-dict
+# 满意度调研
+    - >-
+      ^https:\/\/api\.bilibili\.com\/x\/v2\/dm\/qoe\/show\? - reject-dict
+# 大会员广告
+    - >-
+      ^https:\/\/api\.bilibili\.com\/x\/vip\/ads\/materials\? - reject-dict
+# 直播广告
+    - >-
+      ^https:\/\/api\.live\.bilibili\.com\/xlive\/e-commerce-interface\/v1\/ecommerce-user\/get_shopping_info\? - reject-dict
+# 移除搜索中的默认关键词
+    - >-
+      ^https:\/\/(?:app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.interface\.v1\.Search\/DefaultWords - reject-dict
+# 流量卡推荐
+    - >-
+      ^https:\/\/(?:app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.view\.v1\.View\/TFInfo - reject-dict
+# IP请求、地理位置请求 //api.bilibili.com
+    - >-
+      ^https:\/\/app\.bilibili\.com\/x\/resource\/ip - reject-dict
+    - >-
+      ^https:\/\/api\.bilibili\.com\/x\/web-interface\/zone\?jsonp - reject-dict
+
+  script:
+# 移除右上角活动入口
+    - match: ^https:\/\/app\.bilibili\.com\/x\/resource\/top\/activity\?
+      name: "echoResponse_39"
+      type: request
+      timeout: 60
+      argument: |-
+        text=%7B%20%22code%22%3A%20-404%2C%20%22message%22%3A%20%22%E5%95%A5%E9%83%BD%E6%9C%A8%E6%9C%89%22%2C%20%22ttl%22%3A%201%2C%20%22data%22%3A%20null%20%7D&status-code=200
+
+    - match: ^https:\/\/app\.bilibili\.com\/x\/resource\/show\/skin\?
+      name: "body_rewrite_38_41"
+      type: response
+      require-body: true
+      max-size: -1
+      timeout: 30
+      argument: |-
+        %5B%5B%22json-del%22%2C%5B%22data.common_equip%22%5D%5D%5D
+
+# 移除播放页面视频列表广告
+    - match: ^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.(view|viewunite)\.v1\.View\/(View|ViewProgress)$
+      name: "移除播放页面视频列表广告_43"
+      type: response
+      require-body: true
+      binary-mode: true
+
+# 移除搜索结果广告 - 待完善
+    - match: ^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.polymer\.app\.search\.v1\.Search\/SearchAll$
+      name: "移除播放页面视频列表广告_43"
+      type: response
+      require-body: true
+      binary-mode: true
+
+# 移除评论区广告
+    - match: ^https:\/\/grpc\.biliapi\.net\/bilibili\.main\.community\.reply\.v1\.Reply\/MainList
+      name: "移除播放页面视频列表广告_43"
+      type: response
+      require-body: true
+      binary-mode: true
+
+# 移除动态页面广告 - 待完善
+    - match: ^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.dynamic\.v2\.Dynamic\/DynAll$
+      name: "移除播放页面视频列表广告_43"
+      type: response
+      require-body: true
+      binary-mode: true
+
+# 会员特效弹幕处理
+    - match: ^https:\/\/grpc\.biliapi\.net\/bilibili\.community\.service\.dm\.v1\.DM\/DmSegMobile
+      name: "移除播放页面视频列表广告_43"
+      type: response
+      require-body: true
+      binary-mode: true
+
+# 移除交互式弹幕
+    - match: ^https:\/\/grpc\.biliapi\.net\/bilibili\.community\.service\.dm\.v1\.DM\/DmView
+      name: "移除播放页面视频列表广告_43"
+      type: response
+      require-body: true
+      binary-mode: true
+
+# 移除青少年模式弹窗
+    - match: ^https:\/\/grpc\.biliapi\.net\/bilibili\.app\.interface\.v1\.Teenagers\/ModeStatus
+      name: "移除播放页面视频列表广告_43"
+      type: response
+      require-body: true
+      binary-mode: true
+
+# 移除开屏广告
+    - match: ^https:\/\/app\.bilibili\.com\/x\/v2\/splash\/(brand\/list|event\/list2|list|show)\?
+      name: "移除开屏广告_57"
+      type: response
+      require-body: true
+
+# 移除首页推荐广告
+    - match: ^https:\/\/app\.bilibili\.com\/x\/v2\/feed\/index(\/story)?\?
+      name: "移除开屏广告_57"
+      type: response
+      require-body: true
+
+# 精简首页顶部标签
+    - match: ^https:\/\/app\.bilibili\.com\/x\/resource\/show\/tab\/v2\?
+      name: "移除开屏广告_57"
+      type: response
+      require-body: true
+
+# 移除热搜广告
+    - match: ^https:\/\/app\.bilibili\.com\/x\/v2\/search\/square\?
+      name: "移除开屏广告_57"
+      type: response
+      require-body: true
+
+# 移除观影页广告
+    - match: ^https:\/\/api\.bilibili\.com\/pgc\/page\/(bangumi|cinema\/tab\?)
+      name: "移除开屏广告_57"
+      type: response
+      require-body: true
+
+# 移除直播间广告
+    - match: ^https:\/\/api\.live\.bilibili\.com\/xlive\/app-room\/v1\/index\/getInfoByRoom\?
+      name: "移除开屏广告_57"
+      type: response
+      require-body: true
+
+# 精简我的页面
+    - match: ^https:\/\/app\.bilibili\.com\/x\/v2\/account\/(mine\?|mine\/ipad\?)
+      name: "移除开屏广告_57"
+      type: response
+      require-body: true
+
+script-providers:
+  "echoResponse_39":
+    url: https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/echo-response.js
+    interval: 86400
+  "body_rewrite_38_41":
+    url: https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/body-rewrite.js
+    interval: 86400
+  "移除播放页面视频列表广告_43":
+    url: https://kelee.one/Resource/Script/Bilibili/Bilibili_helper_beta.js
+    interval: 86400
+  "移除开屏广告_57":
+    url: https://kelee.one/Resource/Script/Bilibili/Bilibili_remove_ads.js
+    interval: 86400
