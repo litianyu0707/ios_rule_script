@@ -1,0 +1,24 @@
+name: |-
+  腾讯新闻App去广告
+desc: |-
+  开屏页广告有缓存,需要全新应用
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1099.png
+
+http:
+
+  mitm:
+    - "news.ssp.qq.com"
+    - "r.inews.qq.com"
+
+  script:
+    - match: ^https:\/\/(news\.ssp\.qq\.com\/app|r\.inews\.qq\.com\/(get(QQNewsUnreadList|TagFeedList)|gw\/page\/(channel_feed|event_detail)|news_feed\/hot_module_list))
+      name: "腾讯新闻json_7"
+      type: response
+      require-body: true
+      max-size: 0
+
+script-providers:
+  "腾讯新闻json_7":
+    url: https://raw.githubusercontent.com/app2smile/rules/master/js/qq-news.js
+    interval: 86400
