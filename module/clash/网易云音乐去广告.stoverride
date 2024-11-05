@@ -1,0 +1,153 @@
+name: |-
+  网易云音乐去广告
+desc: |-
+  可自定 - 全面净化
+icon: |-
+  https://raw.githubusercontent.com/Keywos/rule/main/tv/app/144px/Netease.png
+category: |-
+  Key
+system: |-
+  ios
+arguments: |-
+  推荐:1,发现:1,漫游:0,动态:0,以下为首页卡片板块:--,问候语:0,每日推荐:1,推荐歌单:1,最近常听:1,音乐合伙人:1,雷达歌单:0,排行榜:0,推荐专属歌单:0,你的专属歌单:0,脚本伪vip:#
+arguments-desc: |-
+  将 # 改成任意名称即可开启对应脚本\n\n不隐藏为:1  隐藏为:0
+date: |-
+  2024-03-13 18:00:06
+
+rules:
+  - DOMAIN,iadmusicmat.music.126.net,REJECT
+  - DOMAIN,iadmat.nosdn.127.net,REJECT
+  - DOMAIN,iadmatapk.nosdn.127.net,REJECT
+  - DOMAIN,httpdns.n.netease.com,REJECT
+
+http:
+
+  mitm:
+    - "interface.music.163.com"
+    - "interface3.music.163.com"
+    - "interface9.music.163.com"
+    - "httpdns.n.netease.com"
+    - "ipv4.music.163.com"
+
+  header-rewrite:
+    - >-
+      ^https?:\/\/(?:ipv4|interface\d?)\.music\.163\.com\/e?api\/(?:batch|v\d\/resource\/comment\/floor\/get|homepage\/block\/page|link\/page\/rcmd\/(block\/resource\/multi\/refresh|resource\/show)|user\/follow\/users\/mixed\/get|link\/home\/framework\/tab) request-del x-aeapi
+
+  url-rewrite:
+    - >-
+      ^https?:\/\/httpdns.n\.netease\.com - reject
+    - >-
+      ^https?:\/\/httpdns\.music\.163\.com - reject
+# 今日运势 商城 Beat专区 音乐收藏家 | type:ACTIVITY | 低至5.2折
+    - >-
+      ^https?:\/\/interface\d?\.music\.163\.com\/w?e?api\/(?:side-bar\/mini-program\/music-service\/account|delivery\/(batch-deliver|deliver)|moment\/tab\/info\/get|yunbei\/account\/entrance\/get) - reject-dict
+# 播放页歌名下方∶乐迷团｜关注｜播放页提示｜音乐应用红点｜播放提示?
+    - >-
+      ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/(?:resource\/comments?\/musiciansaid|community\/friends\/fans-group\/artist\/group\/get|user\/sub\/artist|music\/songshare\/text\/recommend\/get|mine\/applet\/redpoint|resniche\/position\/play\/new\/get) - reject-dict
+# 搜索页热搜卡片｜猜你喜欢｜我的应用下方提醒
+    - >-
+      ^https?:\/\/interface\d?\.music\.163.com\/w?e?api\/(?:search\/(chart|rcmd\/keyword|specialkeyword)|resource-exposure\/|activity\/bonus\/playpage\/time\/query) - reject-dict
+    - >-
+      ^https?:\/\/interface\d?\.music\.163.com\/eapi\/(?:mlivestream\/entrance\/playpage|link\/(position\/show\/strategy|scene\/show)|ios\/version|v\d\/content\/exposure\/comment\/banner) - reject-dict
+
+  script:
+# mian | 热推、有话想说、分享一下、歌曲下的祝福等小提示去除 ｜ 评论区 乐迷、星评等级 关注 等 图标去除
+    - match: ^https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/e?api\/(batch|v\d\/resource\/comment\/floor\/get)
+      name: "ne_mian_13"
+      type: response
+      require-body: true
+      max-size: 0
+      binary-mode: true
+      timeout: 20
+
+# 伪vip
+    - match: ^https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/e?api\/(music-vip-membership\/client\/vip\/info|vipnewcenter\/app\/resource\/newaccountpage)
+      name: "ne_mian_13"
+      type: response
+      require-body: true
+      max-size: 0
+      binary-mode: true
+      timeout: 20
+
+# tab
+    - match: ^https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/e?api\/link\/home\/framework\/tab
+      name: "ne_mian_13"
+      type: response
+      require-body: true
+      max-size: 0
+      binary-mode: true
+      timeout: 20
+      argument: |-
+        {"MY":"0","DT":"0","TJ":"1","FX":"1"}
+
+# 推荐 | home | 主页
+    - match: ^https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/e?api\/(homepage\/block\/page|link\/page\/rcmd\/(resource\/show|block\/resource\/multi\/refresh))
+      name: "ne_mian_13"
+      type: response
+      require-body: true
+      max-size: 0
+      binary-mode: true
+      timeout: 20
+      argument: |-
+        {"PRGG":"0","PRDRD":"1","PRSCVPT":"1","PRST":"1","HMPR":"1","PRRR":"0","PRRK":"0","PRMST":"0","PRCN":"0"}
+
+# 发现
+    - match: ^https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/e?api\/link\/page\/discovery\/resource\/show
+      name: "ne_mian_13"
+      type: response
+      require-body: true
+      max-size: 0
+      binary-mode: true
+      timeout: 20
+
+# effect
+    - match: ^https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/e?api\/song\/play\/more\/list\/v\d
+      name: "ne_mian_13"
+      type: response
+      require-body: true
+      max-size: 0
+      binary-mode: true
+      timeout: 20
+
+# 我的 MyPageBar ad
+    - match: ^https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/e?api\/link\/position\/show\/resource
+      name: "ne_mian_13"
+      type: response
+      require-body: true
+      max-size: 0
+      binary-mode: true
+      timeout: 20
+
+# 显示未关注你
+    - match: ^https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/e?api\/user\/follow\/users\/mixed\/get
+      name: "ne_mian_13"
+      type: response
+      require-body: true
+      max-size: 0
+      binary-mode: true
+      timeout: 20
+
+    - match: ^https?:\/\/(ipv4|interface\d?)\.music\.163.com\/e?api\/ad
+      name: "eapiad_37"
+      type: request
+      binary-mode: true
+      timeout: 60
+
+# 搜索词
+    - match: ^https?:\/\/interface\d?\.music\.163.com\/w?e?api\/search\/default
+      name: "keyword_43"
+      type: request
+      binary-mode: true
+      timeout: 60
+
+script-providers:
+  "ne_mian_13":
+    url: https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js
+    interval: 86400
+  "eapiad_37":
+    url: http://script.hub/convert/_start_/https://raw.githubusercontent.com/Keywos/rule/main/mocks/eapiad.json/_end_/eapiad.json?type=mock&target-app=stash-stoverride
+    interval: 86400
+  "keyword_43":
+    url: http://script.hub/convert/_start_/https://raw.githubusercontent.com/Keywos/rule/main/mocks/keyword.json/_end_/keyword.json?type=mock&target-app=stash-stoverride
+    interval: 86400
