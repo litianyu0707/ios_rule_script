@@ -69,28 +69,25 @@ dns:
 proxy-providers:
   机场: { type: http, udp: true, interval: 3600, url: '机场clash订阅链接', path: ./Profiles/Proxies/机场.yaml, benchmark-timeout: 3600, benchmark-url: 'http://www.gstatic.com/generate_204'}
 proxy-groups:
-- {name: 家庭组网,icon: https://raw.githubusercontent.com/laobanbiefangcu/icon/main/Policy-Filter/House.png,type: select, proxies: [🇨🇳 unraid,🇨🇳 ubuntu1,🇨🇳 ubuntu2,🇨🇳 ubuntu3,🇨🇳 ubuntu4-IPV6,🇨🇳 ubuntu5-IPV6,🇨🇳 ubuntu6-IPV6,🇨🇳 Home, DIRECT]}
-- {name: 节点选择,icon: https://raw.githubusercontent.com/laobanbiefangcu/Qure/master/IconSet/Color/Proxy.png,type: select, proxies: [自动选择],use: [808,Dler]}
-- {name: 自动选择,icon: https://raw.githubusercontent.com/laobanbiefangcu/icon/main/Policy-Filter/Auto.png, type: url-test, use: [808],url: 'http://www.gstatic.com/generate_204', interval: 300,tolerance: 50}
-- {name: PT下载,icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Download.png, type: select, proxies: [节点选择,全球直连],use: [808]}
-- {name: Usenet,icon: https://raw.githubusercontent.com/laobanbiefangcu/icon/main/Policy-Filter/Usenet1.png, type: select, proxies: [节点选择,全球直连,负载均衡,前置代理],use: [Dler,Other]}
-- {name: 电报信息,icon: https://raw.githubusercontent.com/laobanbiefangcu/icon/main/Policy-Filter/Telegram.png, type: select, proxies: [节点选择],use: [808,Dler]}
-- {name: 无损音乐,icon: https://raw.githubusercontent.com/laobanbiefangcu/icon/main/Policy-Filter/Spotify.png,type: select, proxies: [节点选择],use: [808,Dler]}
-- {name: 人工智能,icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ChatGPT.png, type: select, proxies: [节点选择],use: [808,Dler]}
-- {name: 油管视频,icon: https://raw.githubusercontent.com/laobanbiefangcu/icon/main/Policy-Filter/Youtube.png,type: select, proxies: [节点选择],use: [808,Dler]}
-- {name: 环球影视,icon: https://raw.githubusercontent.com/laobanbiefangcu/icon/main/Policy-Filter/Netflix.png,type: select, proxies: [节点选择],use: [808,Dler]}
-- {name: 国外抖音,icon: https://raw.githubusercontent.com/laobanbiefangcu/icon/main/Policy-Filter/Tiktok.png,type: select, proxies: [节点选择],use: [808,Dler]}
-- {name: 谷歌服务,icon: https://raw.githubusercontent.com/laobanbiefangcu/icon/main/Policy-Filter/Google.png,type: select, proxies: [节点选择],use: [808,Dler]}
-- {name: 贝宝信用,icon: https://raw.githubusercontent.com/laobanbiefangcu/icon/main/Policy-Filter/Paypal.png,type: select, proxies: [节点选择],use: [Dler]}
-- {name: 测速软件,icon: https://raw.githubusercontent.com/laobanbiefangcu/icon/main/Policy-Filter/Speedtest.png,type: select, proxies: [全球直连,节点选择],use: [808,Dler]}
-- {name: 苹果服务,icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple.png,type: select, proxies: [全球直连,节点选择],use: [808,Dler]}
-- {name: 微软服务,icon: https://raw.githubusercontent.com/laobanbiefangcu/icon/main/Policy-Filter/Microsoft.png,type: select, proxies: [全球直连,节点选择],use: [808,Dler]}
-- {name: 数字游戏,icon: https://raw.githubusercontent.com/laobanbiefangcu/icon/main/Policy-Filter/Game.png,type: select, proxies: [全球直连,节点选择],use: [808,Dler]}
+- {name: 节点选择,icon: https://raw.githubusercontent.com/laobanbiefangcu/Qure/master/IconSet/Color/Proxy.png,type: select, proxies: [自动选择],use: [机场]}
+- {name: 自动选择,icon: https://raw.githubusercontent.com/laobanbiefangcu/icon/main/Policy-Filter/Auto.png, type: url-test, use: [机场],url: 'http://www.gstatic.com/generate_204', interval: 300,tolerance: 50}
+- {name: PT下载,icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Download.png, type: select, proxies: [节点选择,全球直连],use: [机场]}
+- {name: Usenet,icon: https://raw.githubusercontent.com/laobanbiefangcu/icon/main/Policy-Filter/Usenet1.png, type: select, proxies: [节点选择,全球直连,负载均衡,前置代理],use: [机场,Other]}
+- {name: 电报信息,icon: https://raw.githubusercontent.com/laobanbiefangcu/icon/main/Policy-Filter/Telegram.png, type: select, proxies: [节点选择],use: [机场]}
+- {name: 无损音乐,icon: https://raw.githubusercontent.com/laobanbiefangcu/icon/main/Policy-Filter/Spotify.png,type: select, proxies: [节点选择],use: [机场]}
+- {name: 人工智能,icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ChatGPT.png, type: select, proxies: [节点选择],use: [机场]}
+- {name: 油管视频,icon: https://raw.githubusercontent.com/laobanbiefangcu/icon/main/Policy-Filter/Youtube.png,type: select, proxies: [节点选择],use: [机场]}
+- {name: 环球影视,icon: https://raw.githubusercontent.com/laobanbiefangcu/icon/main/Policy-Filter/Netflix.png,type: select, proxies: [节点选择],use: [机场]}
+- {name: 国外抖音,icon: https://raw.githubusercontent.com/laobanbiefangcu/icon/main/Policy-Filter/Tiktok.png,type: select, proxies: [节点选择],use: [机场]}
+- {name: 谷歌服务,icon: https://raw.githubusercontent.com/laobanbiefangcu/icon/main/Policy-Filter/Google.png,type: select, proxies: [节点选择],use: [机场]}
+- {name: 贝宝信用,icon: https://raw.githubusercontent.com/laobanbiefangcu/icon/main/Policy-Filter/Paypal.png,type: select, proxies: [节点选择],use: [机场]}
+- {name: 测速软件,icon: https://raw.githubusercontent.com/laobanbiefangcu/icon/main/Policy-Filter/Speedtest.png,type: select, proxies: [全球直连,节点选择],use: [机场]}
+- {name: 苹果服务,icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple.png,type: select, proxies: [全球直连,节点选择],use: [机场]}
+- {name: 微软服务,icon: https://raw.githubusercontent.com/laobanbiefangcu/icon/main/Policy-Filter/Microsoft.png,type: select, proxies: [全球直连,节点选择],use: [机场]}
+- {name: 数字游戏,icon: https://raw.githubusercontent.com/laobanbiefangcu/icon/main/Policy-Filter/Game.png,type: select, proxies: [全球直连,节点选择],use: [机场]}
 - {name: 全球直连,icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Direct.png,type: select, proxies: [DIRECT, REJECT]}
 - {name: 全球拦截,icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Reject.png,type: select, proxies: [DIRECT, REJECT]}
 - {name: 漏网之鱼,icon: https://raw.githubusercontent.com/laobanbiefangcu/icon/main/Policy-Filter/Fish2.png,type: select, proxies: [节点选择,全球直连]}
-- {name: 负载均衡,icon: https://raw.githubusercontent.com/laobanbiefangcu/icon/main/Policy-Filter/Balance.png,type: load-balance,strategy: round-robin,use: [Other], filter: IEPL|HK, hidden: true}
-- {name: 前置代理,icon: https://raw.githubusercontent.com/laobanbiefangcu/icon/main/Policy-Filter/Proxy.png,type: relay,proxies: [负载均衡,🇭🇰Vmiss38.207.173.72], hidden: true}
 rule-providers:
     12306: { type: http, behavior: classical, interval: 7200, url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/12306/12306.yaml', path: ./Rules/12306.yaml }
     ABC: { type: http, behavior: classical, interval: 7200, url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ABC/ABC.yaml', path: ./Rules/ABC.yaml }
@@ -219,7 +216,6 @@ rule-providers:
     YouTube: { type: http, behavior: classical, interval: 7200, url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTube/YouTube.yaml', path: ./Rules/YouTube.yaml }
     YouTubeMusic: { type: http, behavior: classical, interval: 7200, url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTubeMusic/YouTubeMusic.yaml', path: ./Rules/YouTubeMusic.yaml }
 rules:
- - IP-CIDR,192.168.1.0/24,家庭组网,no-resolve
  - RULE-SET,DouYin,DIRECT
  - RULE-SET,Proxy,节点选择
  - RULE-SET,Adobe,全球拦截
