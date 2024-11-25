@@ -341,6 +341,7 @@ rules:
  - RULE-SET,XiaoMi,全球直连
  - RULE-SET,Direct,全球直连
  - RULE-SET,Usenet,Usenet
+#- SRC-IP-CIDR,192.168.1.131/32,DIRECT 设置一下Nas IP，SRCIP规则后的所有请求都走直连
  - SRC-IP-CIDR,192.168.1.131/32,DIRECT 
  - RULE-SET,PrivateTracker,PT下载
  - GEOIP,CN,全球直连
