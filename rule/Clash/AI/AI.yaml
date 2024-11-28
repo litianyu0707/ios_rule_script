@@ -18,3 +18,4 @@ payload:
   - DOMAIN-SUFFIX,apple-relay.cloudflare.com
   - DOMAIN,guzzoni.smoot.apple.com
   - DOMAIN-SUFFIX,poe.com
+  - DOMAIN-SUFFIX,claudeusercontent.com
