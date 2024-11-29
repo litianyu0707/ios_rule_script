@@ -74,6 +74,7 @@ proxies:
 #添加socks5配置
 - {name: 🇨🇳 unraid2, type: socks5, server: #域名, port: #端口, username: #账号, password: #密码, udp: true }
 proxy-providers:
+#添加机场clash订阅链接
   机场: { type: http, udp: true, interval: 3600, url: '机场clash订阅链接', path: ./Profiles/Proxies/机场.yaml, benchmark-timeout: 3600, benchmark-url: 'http://www.gstatic.com/generate_204'}
 proxy-groups:
 - {name: 家庭组网,icon: https://raw.githubusercontent.com/laobanbiefangcu/icon/main/Policy-Filter/House.png,type: select, proxies: [🇨🇳 unraid,🇨🇳 unraid1,🇨🇳 unraid2,DIRECT]}
