@@ -19,3 +19,4 @@ payload:
   - DOMAIN,guzzoni.smoot.apple.com
   - DOMAIN-SUFFIX,poe.com
   - DOMAIN-SUFFIX,claudeusercontent.com
+  - DOMAIN-SUFFIX,kagi.com
