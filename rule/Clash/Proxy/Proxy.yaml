@@ -78,3 +78,4 @@ payload:
   - DOMAIN,bits.roonlabs.net
   - DOMAIN,events.roonlabs.net
   - DOMAIN-SUFFIX,foodnetwork.com
+  - DOMAIN-SUFFIX,linux.do
