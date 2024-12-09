@@ -69,3 +69,4 @@ DOMAIN-SUFFIX,myanonamouse.net
 DOMAIN-SUFFIX,2bxiaoxin.top
 DOMAIN-SUFFIX,880606.xyz
 DOMAIN-SUFFIX,privado.io
+IP-CIDR,38.207.173.0/22,no-resolve
