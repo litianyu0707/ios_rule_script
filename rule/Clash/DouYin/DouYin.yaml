@@ -25,6 +25,7 @@ payload:
   - DOMAIN-SUFFIX,byted.org
   - DOMAIN-SUFFIX,ibytedtos.com
   - DOMAIN-SUFFIX,ibyteimg.com
+  - DOMAIN-SUFFIX,byteeffecttos.com
   - DOMAIN,ecomuser.snssdk.com
   - DOMAIN,p5-sign.douyinpic.com
   - DOMAIN,ma3-normal-lq.zijieapi.com
@@ -38,3 +39,4 @@ payload:
   - DOMAIN-KEYWORD,normal-lq
   - DOMAIN-KEYWORD,search-quic-lq
   - DOMAIN-KEYWORD,search-lq
+  - DOMAIN-KEYWORD,byteeffecttos
