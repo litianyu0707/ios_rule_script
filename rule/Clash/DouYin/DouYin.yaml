@@ -25,6 +25,11 @@ payload:
   - DOMAIN-SUFFIX,byted.org
   - DOMAIN-SUFFIX,ibytedtos.com
   - DOMAIN-SUFFIX,ibyteimg.com
+  - DOMAIN,ecomuser.snssdk.com
+  - DOMAIN,p5-sign.douyinpic.com
+  - DOMAIN,ma3-normal-lq.zijieapi.com
+  - DOMAIN,log0-misc-hl.amemv.com
+  - DOMAIN,mon0-misc-hl.amemv.com
   - DOMAIN-KEYWORD,douyin
   - DOMAIN-KEYWORD,zijie
   - DOMAIN-KEYWORD,core-c-lq
