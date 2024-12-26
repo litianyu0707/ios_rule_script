@@ -359,4 +359,5 @@ rules:
  - SRC-IP-CIDR,192.168.1.131/32,DIRECT 
  - RULE-SET,PrivateTracker,PT下载
  - RULE-SET,ASN.China,DIRECT
+ - GEOIP,CN,DIRECT
  - MATCH,漏网之鱼
