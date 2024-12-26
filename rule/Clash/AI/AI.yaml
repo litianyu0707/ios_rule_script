@@ -25,3 +25,7 @@ payload:
   - DOMAIN-SUFFIX,githubcopilot.com
   - DOMAIN-SUFFIX,monica.im
   - DOMAIN,aistudio.google.com
+  - DOMAIN,generativelanguage.googleapis.com
+  - DOMAIN,proactivebackend-pa.googleapis.com
+  - DOMAIN-SUFFIX,dify.ai
+  - DOMAIN,api.github.com
