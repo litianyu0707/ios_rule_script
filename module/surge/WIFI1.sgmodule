@@ -1,0 +1,28 @@
+#!name=🛜WIFI1
+#!desc=连上家里网络，让IOS SURGE直连
+[Rule]
+SUBNET,SSID:101,DIRECT
+SUBNET,SSID:505,DIRECT
+SUBNET,SSID:606,DIRECT
+SUBNET,SSID:707,DIRECT
+SUBNET,SSID:808,DIRECT
+SUBNET,SSID:909,DIRECT
+SUBNET,SSID:101_5G,DIRECT
+SUBNET,SSID:505_5G,DIRECT
+SUBNET,SSID:606_5G,DIRECT
+SUBNET,SSID:707_5G,DIRECT
+SUBNET,SSID:808_5G,DIRECT
+SUBNET,SSID:909_5G,DIRECT
+[SSID Setting]
+SSID:101 dns-server="198.18.0.2", encrypted-dns-server="off"
+SSID:505 dns-server="198.18.0.2", encrypted-dns-server="off"
+SSID:606 dns-server="198.18.0.2", encrypted-dns-server="off"
+SSID:707 dns-server="198.18.0.2", encrypted-dns-server="off"
+SSID:808 dns-server="198.18.0.2", encrypted-dns-server="off"
+SSID:909 dns-server="198.18.0.2", encrypted-dns-server="off"
+SSID:101_5G dns-server="198.18.0.2", encrypted-dns-server="off"
+SSID:505_5G dns-server="198.18.0.2", encrypted-dns-server="off"
+SSID:606_5G dns-server="198.18.0.2", encrypted-dns-server="off"
+SSID:707_5G dns-server="198.18.0.2", encrypted-dns-server="off"
+SSID:808_5G dns-server="198.18.0.2", encrypted-dns-server="off"
+SSID:909_5G dns-server="198.18.0.2", encrypted-dns-server="off"
