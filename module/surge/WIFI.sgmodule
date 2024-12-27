@@ -1,5 +1,5 @@
 #!name=🛜WIFI
-#!desc=回家直连让mac接管终端
+#!desc=连上家里网络，暂停IOS SURGE，让mac接管终端
 [SSID Setting]
 SSID:101 suspend=true
 SSID:505 suspend=true
