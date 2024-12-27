@@ -1,0 +1,15 @@
+#!name=🛜WIFI
+#!desc=回家直连让mac接管终端
+[SSID Setting]
+SSID:101 suspend=true
+SSID:505 suspend=true
+SSID:606 suspend=true
+SSID:707 suspend=true
+SSID:808 suspend=true
+SSID:909 suspend=true
+SSID:101_5G suspend=true
+SSID:505_5G suspend=true
+SSID:606_5G suspend=true
+SSID:707_5G suspend=true
+SSID:808_5G suspend=true
+SSID:909_5G suspend=true
