@@ -70,5 +70,5 @@ payload:
   - DOMAIN-SUFFIX,2bxiaoxin.top
   - DOMAIN-SUFFIX,880606.xyz
   - DOMAIN-SUFFIX,privado.io
-  - DOMAIN,hust.edu.cn
+  - DOMAIN-SUFFIX,hust.edu.cn
   - IP-CIDR,38.207.173.0/22,no-resolve
