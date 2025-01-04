@@ -346,11 +346,11 @@ rules:
  - RULE-SET,iQIYI,全球直连
  - RULE-SET,XiaoMi,全球直连
  - RULE-SET,ByteDance,全球直连
- - RULE-SET,Direct,全球直连
  - RULE-SET,Usenet,Usenet
 #- SRC-IP-CIDR,192.168.1.131/32,DIRECT 设置一下Nas IP，SRCIP规则后的NAS所有请求都走直连，PT下载不会走代理
  - SRC-IP-CIDR,192.168.1.131/32,DIRECT 
  - RULE-SET,PrivateTracker,PT下载
+ - RULE-SET,Direct,全球直连
  - RULE-SET,ASN.China,DIRECT
  - GEOIP,CN,DIRECT
  - MATCH,漏网之鱼
