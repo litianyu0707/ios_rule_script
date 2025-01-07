@@ -1,0 +1,281 @@
+[General]
+ip-mode = dual
+# > Google，Cloudflare，腾讯，阿里云 DoH
+doh-server = https://doh.pub/dns-query,https://dns.alidns.com/dns-query
+# > IPv6 支持（默认关闭）
+ipv6 = true
+# > 跳过代理
+skip-proxy = 10.0.0.0/8,172.16.0.0/12,localhost,*.local,e.crashlynatics.com,*.cmpassport.com,*.jegotrip.com.cn,*.icitymobile.mobi,id6.me,*.pingan.com.cn,*.cmbchina.com
+# > 旁路隧道
+bypass-tun = 10.0.0.0/8,100.64.0.0/10,127.0.0.0/8,169.254.0.0/16,172.16.0.0/12,192.0.0.0/24,192.0.2.0/24,192.88.99.0/24,192.168.0.0/16,198.51.100.0/24,203.0.113.0/24,224.0.0.0/4,255.255.255.255/32
+# > dns服务器
+dns-server = 223.5.5.5,223.6.6.6,119.29.29.29
+# > wifi 访问
+allow-wifi-access = false
+# > wifi 访问（http 端口）
+wifi-access-http-port = 7222
+# > wifi 访问（socket5 端口）
+wifi-access-socks5-port = 7221
+# > 代理测试网址
+proxy-test-url = http://www.gstatic.com/generate_204
+internet-test-url = http://wifi.vivo.com.cn/generate_204
+# > 测试超时
+test-timeout = 2
+# > 接口模式
+interface-mode = auto
+# > 节点连续失败 3 后进行节点切换
+switch-node-after-failure-times = 3
+# > 资源解析器
+# resource-parser = https://raw.githubusercontent.com/Peng-YM/Sub-Store/master/backend/dist/sub-store-parser.loon.min.js
+[Host]
+*.taobao.com = server:223.5.5.5
+*.tmall.com = server:223.5.5.5
+*.jd.com = server:119.28.28.28
+*.qq.com = server:119.28.28.28
+*.tencent.com = server:119.28.28.28
+*.alicdn.com = server:223.5.5.5
+*.aliyun.com = server:223.5.5.5
+*.weixin.com = server:119.28.28.28
+*.163.com = server:119.29.29.29
+*.126.com = server:119.29.29.29
+*.126.net = server:119.29.29.29
+*.127.net = server:119.29.29.29
+*.netease.com = server:119.29.29.29
+*.mi.com = server:119.29.29.29
+*.xiaomi.com = server:119.29.29.29
+*.bilibili.com = server:119.29.29.29
+*testflight.apple.com = server:8.8.4.4
+mtalk.google.com = 108.177.125.188
+dl.google.com = server:119.29.29.29
+dl.l.google.com = server:119.29.29.29
+
+[Proxy]
+🇨🇳 Ubuntu1 = WireGuard,interface-ip=虚拟内网地址,interface-ipv6=虚拟内网IPV6地址,private-key="************",mtu=1280,dns=119.29.29.29,dnsv6=2402:4e00::,keepalive=30,peers=[{public-key="************",allowed-ips="0.0.0.0/0,::0/0",endpoint=域名:端口}]
+
+[Remote Proxy]
+机场 = 机场订阅,udp=true,fast-open=true,vmess-aead=false,skip-cert-verify=default,enabled=true,flexible-sni=true
+
+[Proxy Group]
+家庭组网 = select,🇨🇳 Ubuntu1,DIRECT,url = http://cp.cloudflare.com/generate_204,img-url = https://raw.githubusercontent.com/laobanbiefangcu/icon/main/Policy-Filter/House.png
+节点选择 = select,自动选择,机场,url = http://cp.cloudflare.com/generate_204,img-url = https://raw.githubusercontent.com/laobanbiefangcu/Qure/master/IconSet/Color/Proxy.png
+自动选择 = select,机场,url = http://cp.cloudflare.com/generate_204,img-url = https://raw.githubusercontent.com/laobanbiefangcu/icon/main/Policy-Filter/Auto.png
+PT下载 = select,节点选择,全球直连,机场,url = http://cp.cloudflare.com/generate_204,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Download.png
+Usenet = select,节点选择,全球直连,机场,url = http://cp.cloudflare.com/generate_204,img-url = https://raw.githubusercontent.com/laobanbiefangcu/icon/main/Policy-Filter/Usenet1.png
+电报信息 = select,节点选择,机场,url = http://cp.cloudflare.com/generate_204,img-url = https://raw.githubusercontent.com/laobanbiefangcu/icon/main/Policy-Filter/Telegram.png
+无损音乐 = select,节点选择,机场,url = http://cp.cloudflare.com/generate_204,img-url = https://raw.githubusercontent.com/laobanbiefangcu/icon/main/Policy-Filter/Spotify.png
+人工智能 = select,节点选择,机场,url = http://cp.cloudflare.com/generate_204,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ChatGPT.png
+油管视频 = select,节点选择,机场,url = http://cp.cloudflare.com/generate_204,img-url = https://raw.githubusercontent.com/laobanbiefangcu/icon/main/Policy-Filter/Youtube.png
+环球影视 = select,节点选择,机场,url = http://cp.cloudflare.com/generate_204,img-url = https://raw.githubusercontent.com/laobanbiefangcu/icon/main/Policy-Filter/Netflix.png
+国外抖音 = select,节点选择,机场,url = http://cp.cloudflare.com/generate_204,img-url = https://raw.githubusercontent.com/laobanbiefangcu/icon/main/Policy-Filter/Tiktok.png
+谷歌服务 = select,节点选择,机场,url = http://cp.cloudflare.com/generate_204,img-url = https://raw.githubusercontent.com/laobanbiefangcu/icon/main/Policy-Filter/Google.png
+贝宝信用 = select,节点选择,机场,url = http://cp.cloudflare.com/generate_204,img-url = https://raw.githubusercontent.com/laobanbiefangcu/icon/main/Policy-Filter/Paypal.png
+测速软件 = select,全球直连,节点选择,自动选择,机场,url = http://cp.cloudflare.com/generate_204,img-url = https://raw.githubusercontent.com/laobanbiefangcu/icon/main/Policy-Filter/Speedtest.png
+苹果服务 = select,全球直连,节点选择,自动选择,机场,url = http://cp.cloudflare.com/generate_204,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple.png
+微软服务 = select,全球直连,节点选择,自动选择,机场,url = http://cp.cloudflare.com/generate_204,img-url = https://raw.githubusercontent.com/laobanbiefangcu/icon/main/Policy-Filter/Microsoft.png
+数字游戏 = select,全球直连,节点选择,自动选择,机场,url = http://cp.cloudflare.com/generate_204,img-url = https://raw.githubusercontent.com/laobanbiefangcu/icon/main/Policy-Filter/Game.png
+全球直连 = select,DIRECT,REJECT,url = http://cp.cloudflare.com/generate_204,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Direct.png
+全球拦截 = select,DIRECT,REJECT,url = http://cp.cloudflare.com/generate_204,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Reject.png
+漏网之鱼 = select,节点选择,全球直连,自动选择,url = http://cp.cloudflare.com/generate_204,img-url = https://raw.githubusercontent.com/laobanbiefangcu/icon/main/Policy-Filter/Fish2.png
+
+[Remote Rule]
+https://raw.githubusercontent.com/laobanbiefangcu/ios_rule_script/master/rule/Surge/Reject/Reject.list, policy=REJECT-DROP, tag=Reject, enabled=true
+#https://raw.githubusercontent.com/laobanbiefangcu/ios_rule_script/master/rule/Surge/Anti-AD/Anti-AD.list, policy=REJECT-DROP, tag=Anti-AD, enabled=true
+https://raw.githubusercontent.com/laobanbiefangcu/ios_rule_script/master/rule/Surge/DouYin/DouYin.list, policy=DIRECT, tag=DouYin, enabled=true
+https://raw.githubusercontent.com/laobanbiefangcu/ios_rule_script/master/rule/Surge/Proxy/Proxy.list, policy=节点选择, tag=Proxy, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/GitHub/GitHub.list, policy=节点选择, tag=GitHub, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Discord/Discord.list, policy=节点选择, tag=Discord, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Docker/Docker.list, policy=节点选择, tag=Docker, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Rarbg/Rarbg.list, policy=节点选择, tag=Rarbg, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/LastFM/LastFM.list, policy=节点选择, tag=LastFM, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/TikTok/TikTok.list, policy=国外抖音, tag=TikTok, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/YouTubeMusic/YouTubeMusic.list, policy=油管视频, tag=YouTubeMusic, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/YouTube/YouTube.list, policy=油管视频, tag=YouTube, enabled=true
+https://raw.githubusercontent.com/laobanbiefangcu/ios_rule_script/master/rule/Surge/OpenAI/OpenAI.list, policy=人工智能, tag=OpenAI, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Claude/Claude.list, policy=人工智能, tag=Claude, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Copilot/Copilot.list, policy=人工智能, tag=Copilot, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Gemini/Gemini.list, policy=人工智能, tag=Gemini, enabled=true
+https://raw.githubusercontent.com/laobanbiefangcu/ios_rule_script/master/rule/Surge/AI/AI.list, policy=人工智能, tag=AI, enabled=true
+https://raw.githubusercontent.com/laobanbiefangcu/ios_rule_script/master/rule/Surge/MovieTV/MovieTV.list, policy=环球影视, tag=MovieTV, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Netflix/Netflix.list, policy=环球影视, tag=Netflix, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Spotify/Spotify.list, policy=无损音乐, tag=Spotify, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/TIDAL/TIDAL.list, policy=无损音乐, tag=TIDAL, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Disney/Disney.list, policy=环球影视, tag=Disney, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/IMDB/IMDB.list, policy=环球影视, tag=IMDB, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Tmdb/Tmdb.list, policy=环球影视, tag=Tmdb, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Bahamut/Bahamut.list, policy=环球影视, tag=Bahamut, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/AppleTV/AppleTV.list, policy=环球影视, tag=AppleTV, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/BBC/BBC.list, policy=环球影视, tag=BBC, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/DAZN/DAZN.list, policy=环球影视, tag=DAZN, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/DiscoveryPlus/DiscoveryPlus.list, policy=环球影视, tag=DiscoveryPlus, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/TVB/TVB.list, policy=环球影视, tag=TVB, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/EncoreTVB/EncoreTVB.list, policy=环球影视, tag=EncoreTVB, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/FOXNOW/FOXNOW.list, policy=环球影视, tag=FOXNOW, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/FOXPlus/FOXPlus.list, policy=环球影视, tag=FOXPlus, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Fox/Fox.list, policy=环球影视, tag=Fox, enabled=true
+https://raw.githubusercontent.com/laobanbiefangcu/ios_rule_script/master/rule/Surge/Max/Max.list, policy=环球影视, tag=Max, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Hulu/Hulu.list, policy=环球影视, tag=Hulu, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/HuluJP/HuluJP.list, policy=环球影视, tag=HuluJP, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/HuluUSA/HuluUSA.list, policy=环球影视, tag=HuluUSA, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/JOOX/JOOX.list, policy=环球影视, tag=JOOX, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/KKBOX/KKBOX.list, policy=环球影视, tag=KKBOX, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/KKTV/KKTV.list, policy=环球影视, tag=KKTV, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/LineTV/LineTV.list, policy=环球影视, tag=LineTV, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/myTVSUPER/myTVSUPER.list, policy=环球影视, tag=myTVSUPER, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/PandoraTV/PandoraTV.list, policy=环球影视, tag=PandoraTV, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/PBS/PBS.list, policy=环球影视, tag=PBS, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/ViuTV/ViuTV.list, policy=环球影视, tag=ViuTV, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/AbemaTV/AbemaTV.list, policy=环球影视, tag=AbemaTV, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/AmazonPrimeVideo/AmazonPrimeVideo.list, policy=环球影视, tag=AmazonPrimeVideo, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Amazon/Amazon.list, policy=环球影视, tag=Amazon, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Telegram/Telegram.list, policy=电报信息, tag=Telegram, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Apple/Apple.list, policy=苹果服务, tag=Apple, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/AppStore/AppStore.list, policy=苹果服务, tag=AppStore, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/iCloud/iCloud.list, policy=苹果服务, tag=iCloud, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/SystemOTA/SystemOTA.list, policy=苹果服务, tag=SystemOTA, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/AppleID/AppleID.list, policy=苹果服务, tag=AppleID, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/TestFlight/TestFlight.list, policy=苹果服务, tag=TestFlight, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/AppleMail/AppleMail.list, policy=苹果服务, tag=AppleMail, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/AppleMusic/AppleMusic.list, policy=苹果服务, tag=AppleMusic, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/AppleNews/AppleNews.list, policy=苹果服务, tag=AppleNews, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/AppleFirmware/AppleFirmware.list, policy=苹果服务, tag=AppleFirmware, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/AppleHardware/AppleHardware.list, policy=苹果服务, tag=AppleHardware, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/AppleDaily/AppleDaily.list, policy=苹果服务, tag=AppleDaily, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/AppleDev/AppleDev.list, policy=苹果服务, tag=AppleDev, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/AppleMedia/AppleMedia.list, policy=苹果服务, tag=AppleMedia, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Apple/Apple_Domain.list, policy=苹果服务, tag=Apple_Domain, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/FitnessPlus/FitnessPlus.list, policy=苹果服务, tag=FitnessPlus, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Siri/Siri.list, policy=苹果服务, tag=Siri, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/AppleProxy/AppleProxy.list, policy=苹果服务, tag=AppleProxy, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Beats/Beats.list, policy=苹果服务, tag=Beats, enabled=true
+https://raw.githubusercontent.com/laobanbiefangcu/ios_rule_script/master/rule/Surge/Steam/Steam.list, policy=数字游戏, tag=Steam, enabled=true
+https://raw.githubusercontent.com/laobanbiefangcu/ios_rule_script/master/rule/Surge/SteamCN/SteamCN.list, policy=数字游戏, tag=SteamCN, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Game/Game.list, policy=数字游戏, tag=Game, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Blizzard/Blizzard.list, policy=数字游戏, tag=Blizzard, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Rockstar/Rockstar.list, policy=数字游戏, tag=Rockstar, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/PlayStation/PlayStation.list, policy=数字游戏, tag=PlayStation, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Epic/Epic.list, policy=数字游戏, tag=Epic, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/WildRift/WildRift.list, policy=数字游戏, tag=WildRift, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Supercell/Supercell.list, policy=数字游戏, tag=Supercell, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/EA/EA.list, policy=数字游戏, tag=EA, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Garena/Garena.list, policy=数字游戏, tag=Garena, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Gog/Gog.list, policy=数字游戏, tag=Gog, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/HoYoverse/HoYoverse.list, policy=数字游戏, tag=HoYoverse, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Game/TencentLoLMobile/TencentLoLMobile.list, policy=DIRECT, tag=TencentLoLMobile, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Game/Assassin'sCreed-Origins/Assassin'sCreed-Origins.list, policy=数字游戏, tag=Assassin'sCreed-Origins, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Game/GameDownloadCN/GameDownloadCN.list, policy=DIRECT, tag=GameDownloadCN, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/NGA/NGA.list, policy=数字游戏, tag=NGA, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Game/GameDownload/GameDownload.list, policy=数字游戏, tag=GameDownload, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Sony/Sony.list, policy=数字游戏, tag=Sony, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Xbox/Xbox.list, policy=数字游戏, tag=Xbox, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Speedtest/Speedtest.list, policy=测速软件, tag=Speedtest, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/PayPal/PayPal.list, policy=贝宝信用, tag=PayPal, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Microsoft/Microsoft.list, policy=微软服务, tag=Microsoft, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/MicrosoftEdge/MicrosoftEdge.list, policy=微软服务, tag=MicrosoftEdge, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/OneDrive/OneDrive.list, policy=微软服务, tag=OneDrive, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Bing/Bing.list, policy=微软服务, tag=Bing, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Teams/Teams.list, policy=微软服务, tag=Teams, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Intel/Intel.list, policy=微软服务, tag=Intel, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Google/Google.list, policy=谷歌服务, tag=Google, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/GoogleDrive/GoogleDrive.list, policy=谷歌服务, tag=GoogleDrive, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/GoogleVoice/GoogleVoice.list, policy=谷歌服务, tag=GoogleVoice, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Chromecast/Chromecast.list, policy=谷歌服务, tag=Chromecast, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/GoogleFCM/GoogleFCM.list, policy=谷歌服务, tag=GoogleFCM, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/GoogleEarth/GoogleEarth.list, policy=谷歌服务, tag=GoogleEarth, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Scholar/Scholar.list, policy=节点选择, tag=Scholar, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Instagram/Instagram.list, policy=节点选择, tag=Instagram, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Facebook/Facebook.list, policy=节点选择, tag=Facebook, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Twitter/Twitter.list, policy=节点选择, tag=Twitter, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Wikimedia/Wikimedia.list, policy=节点选择, tag=Wikimedia, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Qobuz/Qobuz.list, policy=无损音乐, tag=Qobuz, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Pandora/Pandora.list, policy=无损音乐, tag=Pandora, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/SoundCloud/SoundCloud.list, policy=无损音乐, tag=SoundCloud, enabled=true
+https://raw.githubusercontent.com/laobanbiefangcu/ios_rule_script/master/rule/Surge/Porn/Porn.list, policy=节点选择, tag=Porn, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Whatsapp/Whatsapp.list, policy=节点选择, tag=Whatsapp, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Ubuntu/Ubuntu.list, policy=节点选择, tag=Ubuntu, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Reddit/Reddit.list, policy=节点选择, tag=Reddit, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/12306/12306.list, policy=全球直连, tag=12306, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/KugouKuwo/KugouKuwo.list, policy=全球直连, tag=KugouKuwo, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Alibaba/Alibaba_Domain.list, policy=全球直连, tag=Alibaba_Domain, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Baidu/Baidu.list, policy=全球直连, tag=Baidu, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/BaiDuTieBa/BaiDuTieBa.list, policy=全球直连, tag=BaiDuTieBa, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/iQIYI/iQIYI.list, policy=全球直连, tag=iQIYI, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/LeTV/LeTV.list, policy=全球直连, tag=LeTV, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/MOOMusic/MOOMusic.list, policy=全球直连, tag=MOOMusic, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/NetEaseMusic/NetEaseMusic.list, policy=全球直连, tag=NetEaseMusic, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/NetEase/NetEase.list, policy=全球直连, tag=NetEase, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/TencentVideo/TencentVideo.list, policy=全球直连, tag=TencentVideo, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Tencent/Tencent.list, policy=全球直连, tag=Tencent, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Youku/Youku.list, policy=全球直连, tag=Youku, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/WeTV/WeTV.list, policy=全球直连, tag=WeTV, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/ABC/ABC.list, policy=全球直连, tag=ABC, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/CCTV/CCTV.list, policy=DIRECT, tag=CCTV, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/DingTalk/DingTalk.list, policy=DIRECT, tag=DingTalk, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Hupu/Hupu.list, policy=DIRECT, tag=Hupu, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/AliPay/AliPay.list, policy=DIRECT, tag=AliPay, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/DouBan/DouBan.list, policy=DIRECT, tag=DouBan, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/GaoDe/GaoDe.list, policy=DIRECT, tag=GaoDe, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/JingDong/JingDong.list, policy=DIRECT, tag=JingDong, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/MeiTuan/MeiTuan.list, policy=DIRECT, tag=MeiTuan, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Sina/Sina.list, policy=全球直连, tag=Sina, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/SMZDM/SMZDM.list, policy=DIRECT, tag=SMZDM, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Weibo/Weibo.list, policy=DIRECT, tag=Weibo, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/BiliBili/BiliBili.list, policy=全球直连, tag=BiliBili, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/WeChat/WeChat.list, policy=DIRECT, tag=WeChat, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/ChinaMedia/ChinaMedia.list, policy=全球直连, tag=ChinaMedia, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Pinduoduo/Pinduoduo.list, policy=DIRECT, tag=Pinduoduo, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Adobe/Adobe.list, policy=全球拦截, tag=Adobe, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/XiaoMi/XiaoMi.list, policy=全球直连, tag=XiaoMi, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/ByteDance/ByteDance.list, policy=全球直连, tag=ByteDance, enabled=true
+https://raw.githubusercontent.com/laobanbiefangcu/ios_rule_script/master/rule/Surge/Usenet/Usenet.list, policy=Usenet, tag=Usenet, enabled=true
+https://raw.githubusercontent.com/laobanbiefangcu/ios_rule_script/master/rule/Surge/PrivateTracker/PrivateTracker.list, policy=PT下载, tag=PrivateTracker, enabled=true
+https://raw.githubusercontent.com/laobanbiefangcu/ios_rule_script/master/rule/Surge/Direct/Direct.list, policy=全球直连, tag=Direct, enabled=true
+https://raw.githubusercontent.com/VirgilClyne/GetSomeFries/main/ruleset/ASN.China.list, policy=DIRECT, tag=ASN.China, enabled=true
+
+[Rule]
+IP-CIDR,192.168.1.0/24,家庭组网,no-resolve
+GEOIP,CN,DIRECT
+FINAL,漏网之鱼
+
+[URL Rewrite]
+enable=true
+^https?:\/\/(www.)?(g|google)\.cn 302 https://www.google.com
+^https?:\/\/api\.abema\.io\/v\d\/ip\/check reject
+
+[Script]
+http-response ^https?:\/\/biz\.caiyunapp\.com\/(membership_rights|v2\/user) script-path=weathervip.js, requires-body=true, timeout=10, tag=彩云天气VIP
+http-response ^https?:\/\/backend\.getdrafts\.com\/api\/v1\/verification\/verify_receipt script-path=drafts.js, requires-body=true, timeout=10, tag=DraftsVIP
+
+[Remote Rewrite]
+https://raw.githubusercontent.com/loon0x00/loonExampleConfig/master/Rewrite/AutoRewrite_Example.list,auto
+
+[Plugin]
+https://github.com/DualSubs/Universal/releases/latest/download/DualSubs.Universal.plugin, enabled=true
+https://github.com/DualSubs/YouTube/releases/latest/download/DualSubs.YouTube.plugin, enabled=true
+https://github.com/DualSubs/Spotify/releases/latest/download/DualSubs.Spotify.plugin, enabled=true
+https://github.com/DualSubs/Netflix/releases/latest/download/DualSubs.Netflix.plugin, enabled=true
+https://github.com/DualSubs/AddOn/releases/latest/download/DualSubs.AddOn.MicrosoftTranslate.plugin, enabled=true
+https://whatshub.top/plugin/adultra.plugin, enabled=true
+https://whatshub.top/plugin/adultraplus.plugin, enabled=false
+https://raw.githubusercontent.com/zqzess/rule_for_quantumultX/master/Loon/Plugin/FanQieNovel.plugin, tag=番茄小说广告屏蔽, enabled=false
+https://raw.githubusercontent.com/Peng-YM/Sub-Store/master/config/Loon.plugin, policy=节点选择, enabled=true
+https://github.com/VirgilClyne/iRingo/raw/main/plugin/TV.plugin, enabled=true
+https://raw.githubusercontent.com/deezertidal/private/master/plugallery/bdwk.plugin, enabled=true
+https://raw.githubusercontent.com/chengkongyiban/Loon/main/Loon-Gallery/BaiduCloud.plugin, enabled=true
+https://raw.githubusercontent.com/chengkongyiban/Loon/main/Loon-Gallery/UnblockURLinWeChat.plugin, enabled=true
+https://raw.githubusercontent.com/app2smile/rules/master/plugin/tieba.plugin, enabled=true
+https://raw.githubusercontent.com/app2smile/rules/master/plugin/qidian.plugin, enabled=true
+https://raw.githubusercontent.com/chavyleung/scripts/master/box/rewrite/boxjs.rewrite.loon.plugin, policy=全球直连, tag=BoxJs, enabled=true
+https://raw.githubusercontent.com/Tartarus2014/loon-Script/master/Plugin/EMBY.plugin, policy=全球直连, tag=Emby, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rewrite/Loon/Redirect/Redirect.plugin, policy=ALL-SUB, tag=重定向, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rewrite/Loon/Advertising/Advertising.plugin, policy=REJECT, tag=Advertising, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rewrite/Loon/AdvertisingScript/AdvertisingScript.plugin, policy=REJECT, tag=AdvertisingScript, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rewrite/Loon/AllInOne/AllInOne.plugin, policy=REJECT, tag=ALL IN ONE, enabled=true
+https://raw.githubusercontent.com/zqzess/rule_for_quantumultX/master/Loon/Plugin/bilibili.plugin, policy=DIRECT, tag=哔哩哔哩, enabled=true
+https://raw.githubusercontent.com/zqzess/rule_for_quantumultX/master/Loon/Plugin/YouTubeAd.plugin, policy=REJECT, tag=YouTubeADs, enabled=true
+
+[MITM]
+ca-p12 = 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
+ca-passphrase = WC91G619
+enable=false
+hostname = *.example.com,*.sample.com
+skip-server-cert-verify = true
