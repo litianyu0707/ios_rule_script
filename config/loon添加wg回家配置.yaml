@@ -50,9 +50,11 @@ dl.google.com = server:119.29.29.29
 dl.l.google.com = server:119.29.29.29
 
 [Proxy]
+#Wireguard配置
 🇨🇳 Ubuntu1 = WireGuard,interface-ip=虚拟内网地址,interface-ipv6=虚拟内网IPV6地址,private-key="************",mtu=1280,dns=119.29.29.29,dnsv6=2402:4e00::,keepalive=30,peers=[{public-key="************",allowed-ips="0.0.0.0/0,::0/0",endpoint=域名:端口}]
 
 [Remote Proxy]
+#添加机场loon订阅链接
 机场 = 机场订阅,udp=true,fast-open=true,vmess-aead=false,skip-cert-verify=default,enabled=true,flexible-sni=true
 
 [Proxy Group]
@@ -79,6 +81,7 @@ Usenet = select,节点选择,全球直连,机场,url = http://cp.cloudflare.com/
 
 [Remote Rule]
 https://raw.githubusercontent.com/laobanbiefangcu/ios_rule_script/master/rule/Surge/Reject/Reject.list, policy=REJECT-DROP, tag=Reject, enabled=true
+#如果打开贴吧微博等APP刷新不出内容，可以把去广告规则Anti-AD可以注释掉
 #https://raw.githubusercontent.com/laobanbiefangcu/ios_rule_script/master/rule/Surge/Anti-AD/Anti-AD.list, policy=REJECT-DROP, tag=Anti-AD, enabled=true
 https://raw.githubusercontent.com/laobanbiefangcu/ios_rule_script/master/rule/Surge/DouYin/DouYin.list, policy=DIRECT, tag=DouYin, enabled=true
 https://raw.githubusercontent.com/laobanbiefangcu/ios_rule_script/master/rule/Surge/Proxy/Proxy.list, policy=节点选择, tag=Proxy, enabled=true
@@ -232,6 +235,7 @@ https://raw.githubusercontent.com/laobanbiefangcu/ios_rule_script/master/rule/Su
 https://raw.githubusercontent.com/VirgilClyne/GetSomeFries/main/ruleset/ASN.China.list, policy=DIRECT, tag=ASN.China, enabled=true
 
 [Rule]
+#- IP-CIDR,192.168.1.0/24,家庭组网,no-resolve  #IP-CIDR添加内网地址
 IP-CIDR,192.168.1.0/24,家庭组网,no-resolve
 GEOIP,CN,DIRECT
 FINAL,漏网之鱼
@@ -241,13 +245,10 @@ enable=true
 ^https?:\/\/(www.)?(g|google)\.cn 302 https://www.google.com
 ^https?:\/\/api\.abema\.io\/v\d\/ip\/check reject
 
-[Script]
-http-response ^https?:\/\/biz\.caiyunapp\.com\/(membership_rights|v2\/user) script-path=weathervip.js, requires-body=true, timeout=10, tag=彩云天气VIP
-http-response ^https?:\/\/backend\.getdrafts\.com\/api\/v1\/verification\/verify_receipt script-path=drafts.js, requires-body=true, timeout=10, tag=DraftsVIP
-
 [Remote Rewrite]
 https://raw.githubusercontent.com/loon0x00/loonExampleConfig/master/Rewrite/AutoRewrite_Example.list,auto
 
+#插件，带了部分去广告
 [Plugin]
 https://github.com/DualSubs/Universal/releases/latest/download/DualSubs.Universal.plugin, enabled=true
 https://github.com/DualSubs/YouTube/releases/latest/download/DualSubs.YouTube.plugin, enabled=true
