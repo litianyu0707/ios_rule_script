@@ -73,7 +73,7 @@ proxy-groups:
 - {name: 节点选择,icon: https://raw.githubusercontent.com/laobanbiefangcu/Qure/master/IconSet/Color/Proxy.png,type: select, proxies: [自动选择],use: [机场]}
 - {name: 自动选择,icon: https://raw.githubusercontent.com/laobanbiefangcu/icon/main/Policy-Filter/Auto.png, type: url-test, use: [机场],url: 'http://www.gstatic.com/generate_204', interval: 300,tolerance: 50}
 - {name: PT下载,icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Download.png, type: select, proxies: [节点选择,全球直连],use: [机场]}
-- {name: Usenet,icon: https://raw.githubusercontent.com/laobanbiefangcu/icon/main/Policy-Filter/Usenet1.png, type: select, proxies: [节点选择,全球直连],use: [机场]}
+- {name: Usenet,icon: https://raw.githubusercontent.com/laobanbiefangcu/Qure/master/IconSet/Color/Qure.png, type: select, proxies: [节点选择,全球直连],use: [机场]}
 - {name: 电报信息,icon: https://raw.githubusercontent.com/laobanbiefangcu/icon/main/Policy-Filter/Telegram.png, type: select, proxies: [节点选择],use: [机场]}
 - {name: 无损音乐,icon: https://raw.githubusercontent.com/laobanbiefangcu/icon/main/Policy-Filter/Spotify.png,type: select, proxies: [节点选择],use: [机场]}
 - {name: 人工智能,icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ChatGPT.png, type: select, proxies: [节点选择],use: [机场]}
