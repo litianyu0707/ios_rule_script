@@ -88,7 +88,7 @@ proxy-groups:
 - {name: 数字游戏,icon: https://raw.githubusercontent.com/laobanbiefangcu/icon/main/Policy-Filter/Game.png,type: select, proxies: [全球直连,节点选择],use: [机场]}
 - {name: 全球直连,icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Direct.png,type: select, proxies: [DIRECT, REJECT]}
 - {name: 全球拦截,icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Reject.png,type: select, proxies: [DIRECT, REJECT]}
-- {name: 漏网之鱼,icon: https://raw.githubusercontent.com/laobanbiefangcu/icon/main/Policy-Filter/Fish2.png,type: select, proxies: [节点选择,全球直连]}
+- {name: 漏网之鱼,icon: https://raw.githubusercontent.com/laobanbiefangcu/Qure/master/IconSet/Color/Final.png,type: select, proxies: [节点选择,全球直连]}
 rule-providers:
     12306: { type: http, behavior: classical, interval: 86400, url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/12306/12306.yaml', path: ./Rules/12306.yaml }
     ABC: { type: http, behavior: classical, interval: 86400, url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ABC/ABC.yaml', path: ./Rules/ABC.yaml }
