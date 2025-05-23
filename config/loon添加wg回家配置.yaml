@@ -78,7 +78,7 @@ Usenet = select,节点选择,全球直连,机场,url = http://cp.cloudflare.com/
 数字游戏 = select,全球直连,节点选择,自动选择,机场,url = http://cp.cloudflare.com/generate_204,img-url = https://raw.githubusercontent.com/laobanbiefangcu/icon/main/Policy-Filter/Game.png
 全球直连 = select,DIRECT,REJECT,url = http://cp.cloudflare.com/generate_204,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Direct.png
 全球拦截 = select,DIRECT,REJECT,url = http://cp.cloudflare.com/generate_204,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Reject.png
-漏网之鱼 = select,节点选择,全球直连,自动选择,url = http://cp.cloudflare.com/generate_204,img-url = https://raw.githubusercontent.com/laobanbiefangcu/icon/main/Policy-Filter/Fish2.png
+漏网之鱼 = select,节点选择,全球直连,自动选择,url = http://cp.cloudflare.com/generate_204,img-url = https://raw.githubusercontent.com/laobanbiefangcu/Qure/master/IconSet/Color/Final.png
 
 [Remote Rule]
 https://raw.githubusercontent.com/laobanbiefangcu/ios_rule_script/master/rule/Surge/Reject/Reject.list, policy=REJECT-DROP, tag=Reject, enabled=true
