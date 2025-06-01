@@ -1,4 +1,6 @@
 [General]
+disable-stun = true
+sni-sniffing = true
 ip-mode = dual
 # > Google，Cloudflare，腾讯，阿里云 DoH
 doh-server = https://doh.pub/dns-query,https://dns.alidns.com/dns-query
