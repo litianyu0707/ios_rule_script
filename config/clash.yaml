@@ -160,6 +160,7 @@ rule-providers:
     iQIYI: { type: http, behavior: classical, interval: 86400, url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/iQIYI/iQIYI.yaml', path: ./Rules/iQIYI.yaml }
     JingDong: { type: http, behavior: classical, interval: 86400, url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/JingDong/JingDong.yaml', path: ./Rules/JingDong.yaml }
     KugouKuwo: { type: http, behavior: classical, interval: 86400, url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/KugouKuwo/KugouKuwo.yaml', path: ./Rules/KugouKuwo.yaml }
+    Lan: { type: http, behavior: classical, interval: 86400, url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Lan/Lan.yaml', path: ./Rules/Lan.yaml }
     LastFM: { type: http, behavior: classical, interval: 86400, url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/LastFM/LastFM.yaml', path: ./Rules/LastFM.yaml }
     Max: { type: http, behavior: classical, interval: 86400, url: 'https://raw.githubusercontent.com/laobanbiefangcu/ios_rule_script/master/rule/Clash/Max/Max.yaml', path: ./Rules/Max.yaml }
     MeiTuan: { type: http, behavior: classical, interval: 86400, url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/MeiTuan/MeiTuan.yaml', path: ./Rules/MeiTuan.yaml }
@@ -351,6 +352,7 @@ rules:
  - SRC-IP-CIDR,192.168.1.131/32,DIRECT 
  - RULE-SET,PrivateTracker,PT下载
  - RULE-SET,Direct,全球直连
+ - RULE-SET,Lan,全球直连
  - RULE-SET,ASN.China,DIRECT
  - GEOIP,CN,DIRECT
  - MATCH,漏网之鱼
