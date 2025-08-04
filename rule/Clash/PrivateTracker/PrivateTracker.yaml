@@ -479,7 +479,9 @@ payload:
   - DOMAIN-SUFFIX,tracker.keepfrds.com
   - DOMAIN-SUFFIX,tracker01.ilovelemonhd.me
   - DOMAIN-KEYWORD,agsvpt                     
-  - DOMAIN-SUFFIX,agsvpt.trackers.work         
+  - DOMAIN-SUFFIX,agsvpt.trackers.work       
+  - DOMAIN-SUFFIX,agsvpt.cn    
+  - DOMAIN-SUFFIX,agsvpt.com
   - DOMAIN-SUFFIX,tracker.agsvpt.cn           
   - DOMAIN-SUFFIX,ipv6.agsvpt.cn 
   - DOMAIN-SUFFIX,new.qingwa.pro              
