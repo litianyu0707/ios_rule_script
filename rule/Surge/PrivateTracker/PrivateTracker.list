@@ -478,7 +478,9 @@ DOMAIN-SUFFIX,tracker.cinefiles.info
 DOMAIN-SUFFIX,tracker.keepfrds.com
 DOMAIN-SUFFIX,tracker01.ilovelemonhd.me
 DOMAIN-KEYWORD,agsvpt                     
-DOMAIN-SUFFIX,agsvpt.trackers.work         
+DOMAIN-SUFFIX,agsvpt.trackers.work       
+DOMAIN-SUFFIX,agsvpt.cn    
+DOMAIN-SUFFIX,agsvpt.com
 DOMAIN-SUFFIX,tracker.agsvpt.cn           
 DOMAIN-SUFFIX,ipv6.agsvpt.cn 
 DOMAIN-SUFFIX,new.qingwa.pro              
@@ -502,3 +504,5 @@ DOMAIN,pt.gtk.pw
 DOMAIN-SUFFIX,star-space.net
 DOMAIN-SUFFIX,ubits.club
 DOMAIN-SUFFIX,uhd100.com
+DOMAIN-SUFFIX,ptskit.com
+DOMAIN-SUFFIX,playletpt.xyz
